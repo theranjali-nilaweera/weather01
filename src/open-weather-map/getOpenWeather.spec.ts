@@ -1,9 +1,9 @@
 import { createLog } from '../logs/logging';
-import { getWeather } from './getWeather';
+import { getOpenWeather } from './getOpenWeather';
 
 const log = createLog(__filename);
 
-describe('getWeather.spec', () => {
+describe('getOpenWeather.spec', () => {
     const chai = require('chai');
     const expect = chai.expect;
     // const assert = chai.assert;
@@ -11,7 +11,7 @@ describe('getWeather.spec', () => {
     it('should get weather from open weather maps  ', async () => {
         const country = 'London';
         const city = 'uk';
-        const weatherData = await getWeather(country, city);
+        const weatherData = await getOpenWeather(country, city);
 
         log.info('weatherData : %j', weatherData);
         expect(weatherData).to.be.ok;
