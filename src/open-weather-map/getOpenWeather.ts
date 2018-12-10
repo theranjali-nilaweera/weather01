@@ -6,5 +6,10 @@ const log = createLog(__filename);
 const baseUrl = 'samples.openweathermap.org/data/2.5/weather';
 
 export const getOpenWeather = async (country: string, city: string): Promise<any> => {
-    return request.get(baseUrl);
+    return request
+        .get(baseUrl);
+};
+
+const populateLocation = (country: string, city: string) => {
+    return country + ',' + city;
 };
