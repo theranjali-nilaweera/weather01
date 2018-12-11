@@ -29,7 +29,7 @@ describe('router-get-weather.spec', () => {
                 done();
             })
             .catch((errors: any) => {
-                log.error('errors: %s, %j', errors, errors);
+                log.error('weather not returned errors: %s, %j', errors, errors);
                 done(errors);
             });
     });
