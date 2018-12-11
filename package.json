@@ -29,10 +29,10 @@
   "homepage": "https://github.com/theranjali-nilaweera/weather01#readme",
   "dependencies": {
     "@types/cors": "^2.8.4",
-    "async-middleware": "^1.2.1",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
+    "express-async-handler": "^1.1.4",
     "nocache": "^2.0.0",
     "uuid": "^3.3.2",
     "winston": "^3.1.0"

@@ -8,7 +8,9 @@
         "quotemark": [true, "single", "jsx-double"],
         "no-console": false,
         "no-unused-expression": false,
-        "no-consecutive-blank-lines": [true, 1]
+        "no-consecutive-blank-lines": [true, 1],
+        "ordered-imports": [
+            false]
     },
     "rulesDirectory": []
 }
