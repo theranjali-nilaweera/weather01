@@ -12,5 +12,10 @@
         "ordered-imports": [
             false]
     },
-    "rulesDirectory": []
+    "rulesDirectory": [],
+    "linterOptions": {
+        "exclude": [
+            "src/open-weather-map/test-data.ts"
+        ]
+    }
 }

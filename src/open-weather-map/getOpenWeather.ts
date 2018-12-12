@@ -8,13 +8,13 @@ import { createLog } from '../logs/logging';
 const log = createLog(__filename);
 
 // http://samples.openweathermap.org/data/2.5/weather?q=London,uk)
-const baseUrl = 'samples.openweathermap.org/data/2.5/weather';
+const baseUrl = 'api.openweathermap.org/data/2.5/weather';
 
 export const getOpenWeather =  async (country: string, city: string) => {
     log.info('openMapConfigs %j', openMapConfigs.keyValue);
     return request
         .get(baseUrl)
-        .query({ APPIDK: openMapConfigs.keyValue })
+        .query({ APPID: openMapConfigs.keyValue })
         .query({ q: populateLocation(country, city) });
 };
 

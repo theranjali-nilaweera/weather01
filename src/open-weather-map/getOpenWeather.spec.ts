@@ -1,20 +1,26 @@
-import { createLog } from '../logs/logging';
-import { getOpenWeather } from './getOpenWeather';
+import {createLog} from '../logs/logging';
+import {getOpenWeather} from './getOpenWeather';
 
 const log = createLog(__filename);
 
 describe('getOpenWeather.spec', () => {
     const chai = require('chai');
     const expect = chai.expect;
-    // const assert = chai.assert;
 
-    it('should get weather from open weather maps  ', async () => {
+    it('should get weather from open weather maps  ', (done) => {
         const country = 'London';
         const city = 'uk';
-        const weatherData = await getOpenWeather(country, city);
+        getOpenWeather(country, city)
+            .then((res: any) => {
 
-        log.info('weatherData : %j', weatherData);
-        expect(weatherData).to.be.ok;
+            log.info('weatherData : %j', res);
+            expect(res).to.be.ok;
+            done();
+        })
+            .catch((errors: any) => {
+                log.error('weatherData not returned errors: %j', errors);
+                done(errors);
+        });
 
     });
 

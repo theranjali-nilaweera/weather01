@@ -25,11 +25,10 @@ describe('router-get-weather.spec', () => {
                 expect(res).to.be.ok;
                 const found = prop('body', res);
                 log.info('weather returned %j', found);
-
                 done();
             })
             .catch((errors: any) => {
-                log.error('weather not returned errors: %s, %j', errors, errors);
+                log.error('weather not returned errors: %j', errors);
                 done(errors);
             });
     });
