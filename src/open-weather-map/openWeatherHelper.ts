@@ -7,8 +7,7 @@ const successCod = 200;
 
 export const populateWeather = async ( res: any ): Promise<any> => {
     log.info('populateWeather>> recieved weather %s ', res.body);
-    // let weatherData = weatherDataJson(res.body);
-    let weatherData = res.body;
+    const weatherData = res.body;
     if ( ! isValidOpenWeatherData(weatherData) ) {
         return Promise.reject('Open Weather Map returned error. Please check request and try again.');
     }

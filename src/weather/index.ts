@@ -8,8 +8,8 @@ const index: Router = Router();
 
 index.get('/', asyncHandler(async (req: Request, res: Response) => {
 
-        log.info('Recieved request');
-        res.json(await getOpenWeatherForLocation( 'key02' , 'London', 'uk'));
+        log.info('Recieved request for apikey %j country %j city %j', req.headers.apikey, req.query.country, req.query.city);
+        res.json(await getOpenWeatherForLocation( req.headers.apikey, req.query.country, req.query.city));
     }));
 
 export { index };

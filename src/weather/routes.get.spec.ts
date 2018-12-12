@@ -19,7 +19,9 @@ describe('router-get-weather.spec', () => {
     it('get', (done) => {
         request(app)
             .get(`/weather`)
-            .query({ q:  country + ',' + city})
+            .query({country: country})
+            .query({city: city})
+            .set('apikey', 'key01' )
             .expect(200)
             .then((res: any) => {
                 expect(res).to.be.ok;

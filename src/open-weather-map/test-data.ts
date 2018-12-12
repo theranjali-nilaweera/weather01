@@ -1,5 +1,5 @@
 export const testWeatherDataCorrect = {
-    coord: {
+body : { coord: {
         lon: -0.13,
         lat: 51.51
     },
@@ -14,7 +14,7 @@ export const testWeatherDataCorrect = {
     id: 2643743,
     name: 'London',
     cod: 200
-};
+}};
 
 export const testWeatherDataError = {
     id: 2643743,
